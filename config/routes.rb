@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get 'home/index'
   resources :lists
   #root "articles#index"
-  #root "home#index"
-  root "pages#art"
+  root "home#index"
+  #root "pages#art"
 end
