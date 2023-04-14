@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+  </symbol>
+</svg>
+<h1>Bootstrap and Masonry</h1>
+<p>Find me in app/views/pages/index.html.erb</p>
+<p class="lead">
+  <font style="vertical-align: inherit;">
+    <font class="" style="vertical-align: inherit;">
+      Integrirajte </font>
+  </font>
+  <a href="https://masonry.desandro.com/">
+    <font style="vertical-align: inherit;">
+      <font class="" style="vertical-align: inherit;">Masonry</font>
+    </font>
+  </a>
+  <font style="vertical-align: inherit;">
+    <font class="" style="vertical-align: inherit;">
+     sa Bootstrap grid sistemom i komponentom kartica.
+    </font>
+  </font>
+</p>
+<pre><code><font></font>
+&lt;script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async&gt;&lt;/script&gt;<font></font>
+  </code></pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dodavanjem </font></font><code>data-masonry='{"percentPosition": true }'</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">omotača </font></font><code>.row</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, možemo kombinovati moći Bootstrap-ove responzivne mreže i Masonry-jevog pozicioniranja.</font></font></p>
+<hr class="my-5">
+<div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1160px;">
+  <div style="position: absolute; left: 0%; top: 0px;" class="col-sm-6 col-lg-4 mb-4">
+    <div class="card">
+      <svg class="bd-placeholder-img card-img-top"
+      width="100%" height="200"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img" aria-label="Čuvar mjesta: kapa slike"
+      preserveAspectRatio="xMidYMid slice"
+      focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%"
+        fill="#d67e96"></rect>
+        <text x="50%" y="50%"
+        fill="#efe2e6" dy=".3em">Image cap</text></svg>
+      <div class="card-body">
+        <h5 class="card-title">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              Naslov kartice koji se prelama u novi red</font>
+          </font>
+        </h5>
+        <p class="card-text">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              Ovo je duža kartica s pratećim tekstom ispod kao
+              prirodni uvod u dodatni sadržaj. </font>
+            <font style="vertical-align: inherit;">
+              Ovaj sadržaj je malo duži.</font>
+          </font>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div style="position: absolute; left: 50%; top: 0px;" class="col-sm-6 col-lg-4 mb-4">
+    <div class="card p-3">
+      <figure class="p-3 mb-0">
+        <blockquote class="blockquote">
+          <p>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Dobro poznati citat, sadržan u elementu blok citata.</font>
+            </font>
+          </p>
+        </blockquote>
+        <figcaption class="blockquote-footer mb-0 text-body-secondary">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              Neko poznat u </font>
+            </font>
+            <cite title="Naslov izvora">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">naslovu izvora</font>
+              </font>
+            </cite>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 222px;">
+    <div class="card">
+      <svg class="bd-placeholder-img card-img-top"
+      width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+      role="img" aria-label="Čuvar mjesta: kapa slike"
+      preserveAspectRatio="xMidYMid slice"
+      focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#ffd007"></rect>
+        <text x="50%" y="50%" fill="#ffe9e6" dy=".3em">Image cap</text>
+      </svg>
+      <div class="card-body">
+        <h5 class="card-title">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Naslov kartice</font></font></h5>
+        <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ova kartica ima prateći tekst ispod kao prirodni uvod u dodatni sadržaj.</font></font></p>
+        <p class="card-text"><small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Posljednji put ažurirano prije 3 minute</font></font></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 434px;">
+    <div class="card text-bg-primary text-center p-3">
+      <figure class="mb-0">
+        <blockquote class="blockquote">
+          <p>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+              Dobro poznati citat, sadržan u elementu blok citata.</font>
+            </font>
+          </p>
+        </blockquote>
+        <figcaption class="blockquote-footer mb-0 text-white">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+            Neko poznat u </font>
+          </font>
+          <cite title="Naslov izvora">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">naslovu izvora</font>
+            </font>
+          </cite>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 624px;">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Naslov kartice</font>
+          </font>
+        </h5>
+        <p class="card-text">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              Ova kartica ima običan naslov i kratak pasus teksta ispod.</font>
+          </font>
+        </p>
+        <p class="card-text">
+          <small class="text-body-secondary">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Posljednji put ažurirano prije 3 minute</font>
+            </font>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 624px;">
+    <div class="card">
+      <svg class="bd-placeholder-img card-img"
+        width="100%" height="260" xmlns="http://www.w3.org/2000/svg"
+        role="img" aria-label="Čuvar mjesta: slika kartice"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#e6264e"></rect>
+        <text x="50%" y="50%" fill="#e2e6de" dy=".3em">Card image</text>
+      </svg>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 826px;">
+      <div class="card p-3 text-end">
+      <figure class="mb-0">
+        <blockquote class="blockquote">
+          <p>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Dobro poznati citat, sadržan u elementu blok citata.</font></font></p>
+        </blockquote>
+        <figcaption class="blockquote-footer mb-0 text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+          Neko poznat u </font></font><cite title="Naslov izvora"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">naslovu izvora</font></font></cite>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 910px;">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Naslov kartice</font></font></h5>
+      <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ovo je još jedna kartica sa naslovom i pratećim tekstom ispod. </font><font style="vertical-align: inherit;">Ova kartica ima neki dodatni sadržaj koji je čini malo višom u cjelini.</font></font></p>
+      <p class="card-text"><small class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Posljednji put ažurirano prije 3 minute</font></font></small></p>
+    </div>
+  </div>
+</div>

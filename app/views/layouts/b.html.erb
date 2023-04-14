@@ -1,0 +1,17 @@
+<form class="form-inline form-navbar my-2 my-lg-0 order-2"
+action="https://localhost:3000/articles/">
+  <input class="form-control" name="s" type="text" placeholder="Search">
+</form>
+<div class="flex space-x-3">
+  <%= form.text_field :query, class: "py-2 px-4 rounded border ring-0 focus:ring-4
+  focus:ring-orange-100 focus:shadow-none focus:border-orange-500 focus:outline-none"%>
+
+  <%= form.submit 'Search', class: "px-3 py-2 font-medium bg-orange-300 text-neutal-900
+  rounded flex items-center cursor-pointer hover:bg-orange-400 1focus:ring-4 ring-0 1focus:ring-orange-100"%>
+</div>
+<%= form_with(url: articles_path, method: :get,
+data: {controller: "search-form", turbo_frame: "articles", turbo_action: "advance"}) do |form| %>
+  <%= form.label :query, "Search by article title:", class: "block mb-2" %>
+  <%= form.text_field :query %>
+  <%= form.submit 'Search' %>
+<% end %>

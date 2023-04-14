@@ -1,0 +1,55 @@
+<p style="color: green"><%= notice %></p>
+<div>
+  <%= link_to "Edit this post", edit_post_path(@post) %> |
+  <%= link_to "Back to posts", posts_path %>
+</div>
+<hr />
+<h3><%= @post.title %></h3>
+<h5><%= @post.publish %></h5>
+<div id="navbar" class="1collapse">
+  <ul class="nav navbar-nav">
+    <li class="">
+      <p style="width:650px; heigh:310px">
+      <% if @post.image.attached? %>
+        <%= link_to image_tag(@post.image,
+        style:"width:640px; heigh:auto"), @post.image %>
+      <% end %>
+      </p>
+    </li>
+    <li class="">
+      <p style="width:400px; heigh:200px">
+        <%= @post.body %>
+      </p>
+    </li>
+    <li class="">
+      <% if @post.files.attached? %>
+        <% @post.files.each do |attachment| %>
+          <% if attachment.image? %>
+            <%= image_tag attachment, width: "200px" %>
+          <% elsif attachment.audio? %>
+            <audio controls>
+              <source src="<%= rails_blob_url(attachment) %>"
+                type="<%= attachment.content_type %>" />
+            </audio>
+          <% elsif attachment.video? %>
+            <video controls width="480">
+              <source src="<%= rails_blob_url(attachment) %>"
+                type="<%= attachment.content_type %>" />
+            </video>
+          <% else %>
+            <%= link_to attachment.filename,
+            rails_blob_path(attachment, disposition: "attachment") %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </li>
+  </ul>
+</div>
+<hr />
+<div>
+  <%= link_to "Edit this post", edit_post_path(@post) %> |
+  <%= link_to "Back to posts", posts_path %>
+
+  <%= button_to "Destroy this post", @post, method: :delete %>
+</div>
+<br />

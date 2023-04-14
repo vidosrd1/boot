@@ -1,0 +1,37 @@
+<div id="<%= dom_id list %>">
+  <p>
+    <strong>Title:</strong>
+    <%= list.title %>
+  </p>
+  <hr />
+  <% if list.image.content_type.in?(%w[image/jpeg image/png image/jpg]) %>
+    <%= link_to image_tag(list.image,
+    style:"width:300px, height:300px"), list.image %>
+  <% end %>
+  <hr />
+  <% if list.files.attached? %>
+    <% list.files.each do |attachment| %>
+      <% if attachment.image? %>
+        <%= link_to image_tag(attachment,
+          style:"width:200px, height:auto"),
+          attachment %>
+      <% elsif attachment.audio? %>
+        <audio controls>
+          <source src="<%= rails_blob_url(attachment) %>"
+            type="<%= attachment.content_type %>" />
+        </audio>
+      <% elsif attachment.video? %>
+        <video controls width="480">
+          <source src="<%= rails_blob_url(attachment) %>"
+            type="<%= attachment.content_type %>" />
+        </video>
+      <% else %>
+        <%= link_to attachment.filename,
+        rails_blob_path(attachment, disposition: "attachment") %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <hr />
+  <%= list.body %>
+  <br />
+</div>
