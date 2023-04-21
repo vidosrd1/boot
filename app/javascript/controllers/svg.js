@@ -1,11 +1,3 @@
-import "@hotwired/turbo-rails"
-import "controllers"
-import "trix"
-import "@rails/actiontext"
-
-import "popper"
-import "bootstrap"
-
 window.onload = function() {
   var path = document.querySelector('path');
   var length = path.getTotalLength();
