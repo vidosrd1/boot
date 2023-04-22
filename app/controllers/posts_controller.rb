@@ -1,12 +1,20 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
+  def index
+    if params[:status] == "activated"
+      @clients = Posts.activated
+    else
+      @clients = Posts.inactivated
+    end
+  end
+
   # GET /posts or /posts.json
   def index
     if params[:query].present?
       @posts = Post.where("title LIKE ?", "%#{params[:query]}%")
     else
-      @posts = Post.all
+      @posts = Post.all.order('created_at DESC')
     end
 
     # Not too clean but it works!

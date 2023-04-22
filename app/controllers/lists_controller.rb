@@ -6,7 +6,7 @@ class ListsController < ApplicationController
     if params[:query].present?
       @lists = List.where("title LIKE ?", "%#{params[:query]}%")
     else
-      @lists = List.all
+      @lists = List.all.order('created_at DESC')
     end
 
     # Not too clean but it works!

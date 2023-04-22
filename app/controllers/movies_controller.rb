@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
     if params[:query].present?
       @@movies = Movie.where("title LIKE ?", "%#{params[:query]}%")
     else
-      @movies = Movie.all
+      @movies = Movie.all.order('created_at DESC')
     end
 
     # Not too clean but it works!

@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
     if params[:query].present?
       @articles = Article.where("title LIKE ?", "%#{params[:query]}%")
     else
-      @articles = Article.all
+      @articles = Article.all.order('created_at DESC')
     end
 
     # Not too clean but it works!
